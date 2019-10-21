@@ -108,12 +108,13 @@ Add isolines to an existing instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ::
 
-    isochrones = il.OsmIsolines('Prospect Park, Brooklyn,NYC, USA',
+    from shapely.geometry import Point
+    isochrones = il.OsmIsolines(Point(179370.985,664422.488),
                                  network_type = 'walk',
                                  values=[500, 1500, 2500, 3500],
-                                 unit= 'ft',
-                                 sample = 600)
-    isochrones.plot_isolines()
+                                 crs = 2039,
+                                 knn = 25)
+    isochrones.plot_isolines(figsize = (10, 10))
 
 
 .. image:: /../figs/habima1.png

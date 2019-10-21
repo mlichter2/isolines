@@ -32,6 +32,8 @@ geopandas, NetworkX and osmnx.
   
 
 ## Examples
+A repository with a wide variety of examples can be found here: https://github.com/mlichter2/isolines_examples
+
 * Create isolines/isochroones for complex geometries (polygons and linestrings) as well as simple point geometries
 
 If you only want to output a GeoDataFrame of isolines/isochrones 
@@ -55,6 +57,8 @@ iso = il.OsmIsolines('Prospect Park, Brooklyn, NYC, USA', metric = 'time', value
 iso.plot_isolines(figsize = (10, 10))
 ```
 ![](docs/figs/prospect_park.png)
+(for basic examples see also https://github.com/mlichter2/isolines_examples/blob/master/examples/01_basic_example.ipynb)
+
 * The isolines/isochroones boundaries are not confined to the existing network nodes. The network is amended to  include
  new source and target nodes based on the input geometry and distances/times specified, so that large edges are cut in
  the respective location of new source/ target nodes to yield a more realistic isolines/isochroones boundary.
@@ -72,6 +76,10 @@ iso.change_isolines(knn = 15)
 iso.plot_isolines(plot_nodes=True, plot_source_nodes=True,figsize = (10,10))
 ```
 ![](docs/figs/bozeman2.png)
+(examples for refining boundaries can be found here:
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/03_refining_isolines_concave_boundaries_and_smoothing.ipynb)
+
+
 * isolines lets you either download a network from **OpenStreetMap (OSM)** or use an edges **geopandas GeoDataFrame**
 or use a **NetworkX graph**
 In the example below, an edges GEoDataFrame from the US Census Tiger roads dataset is used
@@ -102,15 +110,22 @@ tiger = il.GpdIsolines('Prospect Park, Brooklyn, NYC, USA',
 tiger.plot_isolines(figsize = (10, 10))
 ```
 ![](docs/figs/tiger.png)
+(examples for using different data sources:
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/06_using_different_input_sources.ipynb,
+ 
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/07_example_using_US_Census_TIGER_dataset.ipynb)
+
+
 * Add isolines to an existing instance
 
 ```python
-isochrones = il.OsmIsolines('Prospect Park, Brooklyn,NYC, USA',
+from shapely.geometry import Point
+isochrones = il.OsmIsolines(Point(179370.985,664422.488),
                                  network_type = 'walk',
                                  values=[500, 1500, 2500, 3500],
-                                 unit= 'ft',
-                                 sample = 600)
-isochrones.plot_isolines()
+                                 crs = 2039,
+                                 knn = 25)
+isochrones.plot_isolines(figsize = (10, 10))
 ```
 ![](docs/figs/habima1.png)
 ```python
@@ -118,6 +133,8 @@ isochrones.add_isolines([1000, 2000, 3000, 4000])
 isochrones.plot_isolines()
 ```
 ![](docs/figs/habima2.png)
+
+(examples: https://github.com/mlichter2/isolines_examples/blob/master/examples/02_adding_isolines_and_isochrones.ipynb)
 
 * Extract nodes and edges GeoDataFrames, NetworkX graphs
 ```buildoutcfg
