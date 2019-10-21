@@ -1,0 +1,37 @@
+.. _osmisolines:
+
+
+=========================================================
+OsmIsolines - Isolines generated from a network downloaded from OSM
+=========================================================
+
+Overview
+========
+
+.. currentmodule:: isolines.core
+.. autoclass:: OsmIsolines
+    :members:
+    :inherited-members:
+
+
+    .. automethod:: change_isolines
+    .. automethod:: add_isolines
+    .. automethod:: get_edges
+    .. automethod:: get_graph
+    .. automethod:: get_isolines
+    .. automethod:: get_location
+    .. automethod:: get_nodes
+    .. automethod:: get_projected_edges
+    .. automethod:: get_projected_graph
+    .. automethod:: get_projected_isolines
+    .. automethod:: get_projected_location
+    .. automethod:: get_projected_nodes
+    .. automethod:: get_projected_source_nodes
+    .. automethod:: get_sample_points
+    .. automethod:: plot_isolines
+
+
+.. toctree::
+   :maxdepth: 2
+
+
