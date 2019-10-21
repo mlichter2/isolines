@@ -224,7 +224,7 @@ class OsmIsolines(object):
 
             results = delayed()(isos)
             isos = results.compute()
-            self.results = results
+
         else:
             for idx, d in enumerate(self.values):
                 iso = self._create_isoline(idx, knn)
@@ -1219,7 +1219,7 @@ class OsmIsolines(object):
 
                     concat = delayed(self._concat_nodes)(cc_list)
                     results = concat.compute()
-                    self.results2 = concat
+
                     list_.append(results)
                     nodes_coords.append(results)
             self.iso_nodes[values_arr[idx]] = np.vstack(list_)
