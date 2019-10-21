@@ -57,6 +57,7 @@ iso = il.OsmIsolines('Prospect Park, Brooklyn, NYC, USA', metric = 'time', value
 iso.plot_isolines(figsize = (10, 10))
 ```
 ![](docs/figs/prospect_park.png)
+
 (for basic examples see also https://github.com/mlichter2/isolines_examples/blob/master/examples/01_basic_example.ipynb)
 
 * The isolines/isochroones boundaries are not confined to the existing network nodes. The network is amended to  include
@@ -76,6 +77,7 @@ iso.change_isolines(knn = 15)
 iso.plot_isolines(plot_nodes=True, plot_source_nodes=True,figsize = (10,10))
 ```
 ![](docs/figs/bozeman2.png)
+
 (examples for refining boundaries can be found here:
  https://github.com/mlichter2/isolines_examples/blob/master/examples/03_refining_isolines_concave_boundaries_and_smoothing.ipynb)
 
@@ -110,6 +112,7 @@ tiger = il.GpdIsolines('Prospect Park, Brooklyn, NYC, USA',
 tiger.plot_isolines(figsize = (10, 10))
 ```
 ![](docs/figs/tiger.png)
+
 (examples for using different data sources:
  https://github.com/mlichter2/isolines_examples/blob/master/examples/06_using_different_input_sources.ipynb,
  

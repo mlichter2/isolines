@@ -38,6 +38,8 @@ amend them and perform EDA use one of the following classes: GpdIsolimes, NXIsol
    :align: center
    :alt:
 
+(for basic examples see also https://github.com/mlichter2/isolines_examples/blob/master/examples/01_basic_example.ipynb)
+
 
 Augmentation of the network for precise isoline/isochroone delineation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -66,6 +68,10 @@ refined delineation if needed::
 .. image:: /../figs/bozeman2.png
    :align: center
    :alt:
+
+(examples for refining boundaries can be found here:
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/03_refining_isolines_concave_boundaries_and_smoothing.ipynb)
+
 
 
 Use different data sources
@@ -104,6 +110,12 @@ or use a **NetworkX graph**::
    :align: center
    :alt:
 
+
+(examples for using different data sources:
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/06_using_different_input_sources.ipynb,
+
+ https://github.com/mlichter2/isolines_examples/blob/master/examples/07_example_using_US_Census_TIGER_dataset.ipynb)
+
 Add isolines to an existing instance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ::
@@ -139,6 +151,12 @@ Generate nodes and edges GeoDataFrames, extract NetworkX graphs
     edges = isochrones.get_edges()
     G = isochrones.get_graph()
 
+
+
+
+
+
+(examples: https://github.com/mlichter2/isolines_examples/blob/master/examples/02_adding_isolines_and_isochrones.ipynb)
 
 
 .. toctree::
