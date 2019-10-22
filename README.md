@@ -14,7 +14,7 @@ geopandas, NetworkX and osmnx.
 ## Main Features
    * Generation of isolines/isochroones for areas, segments, and point locations
    * Augmentation of the network for precise isoline/isochroone delineation
-   * Based on a **concave hull** algorithm by default (for walking networks, otherwise convex hull is the default 
+   * Based on a **concave hull** (based on Moreira, Adriano & Santos, Maribel. (2007) [1]) algorithm by default (for walking networks, otherwise convex hull is the default 
    and concave hull is optional)
    * Source location can be either an address string to be geocoded using OSM Nominatim or a shapely geometry
    * Accepts various graph inputs:  the ```GpdIsolimes``` class excepts edges GeoDataFrames and the
@@ -145,3 +145,5 @@ nodes = isochrones.get_nodes()
 edges = isochrones.get_edges()
 G = isochrones.get_graph()
 ```
+
+1. Moreira, Adriano & Santos, Maribel. (2007). Concave hull: A k-nearest neighbours approach for the computation of the region occupied by a set of points.. 61-68. 
