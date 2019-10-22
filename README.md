@@ -14,13 +14,13 @@ geopandas, NetworkX and osmnx.
 ## Main Features
    * Generation of isolines/isochroones for areas, segments, and point locations
    * Augmentation of the network for precise isoline/isochroone delineation
-   * Based on a **concave hull** (based on Moreira, Adriano & Santos, Maribel. (2007) [1]) algorithm by default (for walking networks, otherwise convex hull is the default 
+   * Based on a **concave hull** algorithm by default (Moreira, Adriano & Santos, Maribel. (2007) [1]) (for walking networks, otherwise convex hull is the default 
    and concave hull is optional)
    * Source location can be either an address string to be geocoded using OSM Nominatim or a shapely geometry
    * Accepts various graph inputs:  the ```GpdIsolimes``` class excepts edges GeoDataFrames and the
     ```NXIsoliner``` class accepts NetworkX graphs as input and the ```OsmIsolines``` class
     allows you tod downloads a street network from OpenStreetMap (OSM).
-    ()
+   
    
  #### Other Features
   * Easy built-in visualization

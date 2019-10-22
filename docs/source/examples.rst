@@ -58,7 +58,7 @@ The isolines/isochroones boundaries are not confined to the existing network nod
 
 Isoline boundary adjustment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The output isolines/isochroones are based on a **concave hull** (rather than convex hull) heuristic by default
+The output isolines/isochroones are based on a **concave hull** (rather than convex hull) heuristic algorithm by default (Moreira, Adriano & Santos, Maribel. (2007) [1])
 resulting in a more realistically shaped and accurate isolines/isochroones. These can be tweaked to get even more
 refined delineation if needed::
 
@@ -158,6 +158,9 @@ Generate nodes and edges GeoDataFrames, extract NetworkX graphs
 
 (examples: https://github.com/mlichter2/isolines_examples/blob/master/examples/02_adding_isolines_and_isochrones.ipynb)
 
+
+
+1. Moreira, Adriano & Santos, Maribel. (2007). Concave hull: A k-nearest neighbours approach for the computation of the region occupied by a set of points.. 61-68. 
 
 .. toctree::
    :maxdepth: 2
